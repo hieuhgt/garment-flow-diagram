@@ -1,6 +1,7 @@
 import { Home, Store, Warehouse, Layers, ArrowRight, Package, ShoppingBag } from "lucide-react";
 import shirtAndPantsInPolybags from "@assets/generated_images/shirt_and_pants_in_separate_polybags_in_one_carton.png";
 import outerCartonWithMixedSizes from "@assets/generated_images/outer_carton_with_mixed_size_inner_boxes.png";
+import palletWithMixedSizes from "@assets/generated_images/pallet_with_mixed_size_boxes.png";
 
 export default function PackingMethods() {
   return (
@@ -41,14 +42,7 @@ export default function PackingMethods() {
               
               <div className="w-full bg-blue-50/50 rounded-lg p-4 border border-blue-100 text-center space-y-2">
                 <p className="text-sm text-slate-700 leading-relaxed font-medium">
-                   Deliver directly to customer from factory
-                </p>
-                <div className="h-px bg-blue-200/50 w-full" />
-                <p className="text-sm text-slate-700 leading-relaxed">
-                  Garments of 1 customer packed into 1 carton.
-                </p>
-                <p className="text-xs text-slate-500 italic mt-2">
-                  (e.g., Customer orders 2 shirts &rarr; 2 polybags, 1 carton)
+                   Group garments in one carton by customer address
                 </p>
               </div>
 
@@ -75,6 +69,15 @@ export default function PackingMethods() {
                 <div className="absolute bottom-4 right-0 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-slate-600 border border-slate-200 shadow-sm">
                   Store Address
                 </div>
+              </div>
+
+              <div className="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 text-center space-y-2">
+                 <p className="text-sm text-slate-600 leading-relaxed">
+                   Group garments in one inner box & carton by customer address or/and store address
+                 </p>
+                 <p className="text-xs text-amber-600 font-medium border-t border-slate-200 pt-2 mt-1">
+                   * Inner box is not always required, it's an option to configure
+                 </p>
               </div>
 
                {/* Store Flow Diagram - Neutral Colors */}
@@ -118,8 +121,8 @@ export default function PackingMethods() {
                <div className="relative group">
                 <div className="absolute -inset-2 bg-blue-100/50 rounded-xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <img 
-                  src={outerCartonWithMixedSizes} 
-                  alt="Carton with mixed size inner boxes" 
+                  src={palletWithMixedSizes} 
+                  alt="Pallet with mixed size boxes" 
                   className="relative w-64 h-64 object-contain drop-shadow-md transition-transform duration-300 group-hover:scale-105"
                 />
                 <div className="absolute bottom-4 right-0 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-slate-600 border border-slate-200 shadow-sm">
@@ -130,10 +133,10 @@ export default function PackingMethods() {
               {/* MTM Description */}
               <div className="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 text-center space-y-2">
                  <p className="text-sm text-slate-600 leading-relaxed">
-                   <strong>MTM cartons are consolidated and staged</strong> for later delivery to stores or customers.
+                   Group garments in one inner box & carton by customer address or/and store address
                  </p>
-                 <p className="text-xs text-slate-500 italic border-t border-slate-200 pt-2 mt-1">
-                   Grouped by store address or customer address
+                 <p className="text-xs text-amber-600 font-medium border-t border-slate-200 pt-2 mt-1">
+                   * Inner box is not always required, it's an option to configure
                  </p>
               </div>
 
